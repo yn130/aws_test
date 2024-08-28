@@ -24,7 +24,7 @@ app.get('/', (req,res) => {
     res.send('안녕')
 });
 
-app.post('/api/users', async (req, res) => {
+app.post('/api/users', async (req, res) => {            
     try {
         const {username, email} = req.body;
         const user = await User.create({ username, email});
